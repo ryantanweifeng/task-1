@@ -17,6 +17,7 @@ export default function Home(props){
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
+      <Text>Hi, I'm SPRINT1</Text>
       <FlatList
         data={movie}
         renderItem={({item}) => 
