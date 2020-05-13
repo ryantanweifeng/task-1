@@ -12,6 +12,8 @@ export default function Home(props){
         {name: 'Men in Black 3', key: '7'},
       ]);
 
+     // console.warn(props)
+
   return (
     <View style={styles.container}>
       <Text>Home Screen</Text>
@@ -20,15 +22,11 @@ export default function Home(props){
         renderItem={({item}) => 
           <View>
             <Text style={styles.item}>{item.name}</Text>
-            <Button title="Click for more details"></Button>
+            <Button onPress={() =>
+        props.navigation.navigate('Details', { name: item.name })
+        } title="Click for more details"></Button>
           </View>}
         />
-      <Button
-        title="Go to Jane's profile"
-        onPress={() =>
-        props.navigation.navigate('Details', { name: 'Jane' ,age:'12' })
-        }
-      />
     </View>
     );
 }

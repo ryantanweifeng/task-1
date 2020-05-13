@@ -28,13 +28,6 @@ export default function App() {
   ]);*/}
   
   return (
-    <View style={styles.container}>
-      {/*<FlatList
-        data={movie}
-        renderItem={({item}) => <View><Text style={styles.item}>{item.name}</Text> <Button title='Click me'></Button></View>}
-      />*/}
-
-
       <NavigationContainer>
       <Stack.Navigator >
         <Stack.Screen
@@ -51,7 +44,6 @@ export default function App() {
         
       </Stack.Navigator>
     </NavigationContainer>
-    </View>
   );
 }
 
